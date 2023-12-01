@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Lobster&family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="box-container">
+      <div class="box">
+        <div class="mainTitle">
+          <span><b> To do</b></span>
+          <span id="taskCounttext"></span>
+          <div id="todo-cards" class="cards" draggable="true"></div>
+        </div>
+        <button id="todo" class="addCard">+ Add card</button>
+        <div class="over">
+          <i></i>
+        </div>
+      </div>
+      <div class="box">
+        <div class="mainTitle">
+          <span><b> In progress</b></span>
+        </div>
+        <div id="inprogress-cards" class="cards" draggable="true"></div>
+        <button id="inprogress" class="addCard">+ Add card</button>
+        <div class="over">
+          <i></i>
+        </div>
+      </div>
+      <div class="box">
+        <div class="mainTitle">
+          <span><b>Stuck</b></span>
+        </div>
+        <div class="cards" id="stuck-cards" draggable="true"></div>
+        <button id="stuck" class="addCard">+ Add card</button>
+        <div class="over">
+          <i></i>
+        </div>
+      </div>
+      <div class="box">
+        <div class="mainTitle">
+          <span><b>Done</b></span>
+        </div>
+        <div class="cards" id="done-cards" draggable="true"></div>
+        <button id="done" class="addCard">+ Add card</button>
+        <div class="over">
+          <i></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="addTask">
+      <h1><b>Add Task</b></h1>
+      <p>Title</p>
+      <input type="text" id="titleInput" />
+      <p>Description</p>
+      <input type="text" id="descriptionInput" />
+      <p>Status</p>
+      <select name="" id="status-select">
+        <option value=""></option>
+        <option value="todo">To do</option>
+        <option value="inprogress">In progress</option>
+        <option value="stuck">Stuck</option>
+        <option value="done">Done</option>
+      </select>
+      <p>Priority</p>
+      <select name="" id="priority-select">
+        <option value=""></option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+      <div>
+        <button id="addTaskButton">Add Task</button>
+      </div>
+    </div>
+    <script src="./todo.js"></script>
+  </body>
+</html>
